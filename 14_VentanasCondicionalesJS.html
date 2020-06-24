@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Uso de prompt, confirm y do-while en JavaScript</title>    
+</head>
+
+<body>   
+    <script>
+        //DECLARAMOS UNA VARIABLE DONDE VAMOS A CONCATENAR UNA FRASE
+        var mensaje = "";
+        //BUCLE DO WHILE PARA INTRODUCIR VARIAS CADENAS
+        do {
+            //PEDIMOS LA PALABRA POR TECLADO
+            var cadena = prompt("Introduce una palabra");
+            //SI LA VARIABLE mensaje ESTÁ VACÍA
+            if (mensaje == "") {
+                //CONCATENAMOS SIN UTILIZAR ASTERISCO
+                mensaje = mensaje + cadena;                
+            }
+            //SINO
+            else {
+                //CONCATENAMOS CON GUIÓN
+                mensaje = mensaje + "-" + cadena;
+            }
+            //MIENTRAS SE PULSE ACEPTAR EN EL MENSAJE EMERGENTE CONFIRM
+        } while (confirm("¿Desea seguir escribiendo?"));
+        //SI SE PULSÓ CANCELAR IMPRIMIMOS EL mensaje
+        document.write(mensaje);
+    </script>    
+</body>
+</html>
